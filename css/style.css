@@ -1,14 +1,14 @@
 /* Шрифты */
 
 @font-face {
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  src: url(/fonts/OpenSans-Regular.ttf) format("ttf"), url(/fonts/OpenSans-Regular.woff) format("woff"), url(/fonts/OpenSans-Regular.woff2) format("woff2");
   font-family: "OpenSans-Regular";
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  src: url(/fonts/OpenSans-Bold.ttf) format("ttf"), url(/fonts/OpenSans-Bold.woff) format("woff"), url(/fonts/OpenSans-Bold.woff2) format("woff2");
   font-family: "OpenSans-Bold";
   font-weight: 700;
   font-style: normal;
@@ -26,10 +26,12 @@
 
 .header {
   position: relative;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 15px;
+  background-image: url(/images/banner-mobile.jpg);
   background-size: cover;
-  background-position: center;
-  padding: 26px 0 126px;
 }
 
 .header::after {
@@ -42,36 +44,36 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   background-size: cover;
+  background-position: center;
   content: "";
 }
 
 .header-container {
   position: relative;
   z-index: 1;
+  width: 82%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  padding: 0 15px;
+  justify-content: center;
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .header-top {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 102px;
+  flex-direction: column-reverse;
+  margin-bottom: 40px;
 }
 
-.header-logo {
-  width: 183px;
+.header-menu {
+  position: absolute;
+  top: 40px;
+  right: -15px;
 }
 
 .header-menu-list {
-  display: flex;
-  gap: 35px;
+  display: none;
 }
 
 .header-menu-link {
@@ -88,51 +90,199 @@
   text-decoration: underline;
 }
 
+.menu-button {
+  position: relative;
+  z-index: 1;
+  width: 23px;
+  height: 3px;
+  background-color: #ffffff;
+  border: none;
+}
+
+.menu-button::before {
+  position: absolute;
+  z-index: 1;
+  bottom: 6px;
+  right: 0;
+  width: 23px;
+  height: 3px;
+  background-color: #ffffff;
+  content: "";
+}
+
+.menu-button::after {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  right: 0;
+  width: 23px;
+  height: 3px;
+  background-color: #ffffff;
+  content: "";
+}
+
 .header-title {
-  max-width: 690px;
   font-family: OpenSans-Bold, Arial, sans-serif;
-  font-size: 45px;
   font-weight: 700;
-  line-height: 75px;
+  font-size: 26px;
+  line-height: 36px;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
 }
 
+
+/* Блок Тренды */
+
+
+.trends {
+  max-width: 100%;
+  margin-top: 45px;
+}
+
+.section-header {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0f0d0e;
+}
+
+.section-header::after {
+  display: block;
+  width: 66px;
+  margin: 5px auto 0;
+  opacity: 0.400;
+  border-bottom: 3px #b59f5b solid;
+  content: "";
+}
+
+.trends-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 15px;
+}
+
+.trend-post {
+  position: relative;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  min-height: 232px;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.trend-post-info {
+  position: relative;
+  z-index: 1;
+  padding: 35px 25px 30px;
+  border: 3px solid rgba(181, 159, 91, .6);
+  flex-grow: 1;
+}
+
+.trend-post::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  content: "";
+}
+
+.trend-post:nth-child(1) {
+  background-image: url(/images/trend1.jpg);
+}
+
+.trend-post:nth-child(2) {
+  background-image: url(/images/trend2.jpg);
+}
+
+.trend-post:nth-child(3) {
+  background-image: url(/images/trend3.jpg);
+}
+
+.trend-post:nth-child(4) {
+  background-image: url(/images/trend4.jpg);
+}
+
+.trend-post-tags {
+  display: flex;
+  gap: 18px;
+}
+
+.trend-post-tag-link {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #b59f5b;
+}
+
+.trend-post-tag-link:hover {
+  text-decoration: underline;
+}
+
+.trend-post-title {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.trend-post-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.trend-post-link:hover {
+  color: #b59f5b;
+}
+
+
 /* Стили основной части страницы */
 
-.page {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
+.centered-part {
   box-sizing: border-box;
-  margin: 64px auto;
+  margin: 45px auto 70px;
   padding: 0 15px;
 }
 
 .content {
-  max-width: 780px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 35px;
+  margin-bottom: 45px;
 }
 
 .post {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid #eeeeee;
+  padding-bottom: 22px;
 }
 
 .post-image {
-  width: 381px;
-  height: 294px;
-  margin-right: 30px;
+  width: 100%;
   background-color: #eff6f1;
 }
 
 .post-tags {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 3px;
+  padding-top: 10px;
+  margin-bottom: 6px;
 }
 
 .post-tag {
@@ -158,7 +308,7 @@
 }
 
 .post-heading {
-  margin-bottom: 45px;
+  margin-bottom: 18px;
 }
 
 .post-title {
@@ -167,9 +317,9 @@
 
 .post-title-link {
   font-family: OpenSans-Bold, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
-  line-height: 24px;
   color: #0f0d0e;
   text-transform: uppercase;
   text-decoration: none;
@@ -196,11 +346,12 @@
 }
 
 .post-text {
+  width: 100%;
   margin-bottom: 10px;
   font-family: OpenSans-Regular, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
-  line-height: 22px;
   color: #0f0d0e;
 }
 
@@ -211,7 +362,7 @@
 /* Стили боковой колонки */
 
 .side-column {
-  max-width: 272px;
+  width: 100%;
   padding: 0 1px;
   box-sizing: border-box;
 }
@@ -289,7 +440,8 @@
 }
 
 .search-field {
-  width: 222px;
+  min-width: 222px;
+  flex-grow: 1;
 }
 
 .search-input {
@@ -316,7 +468,7 @@
   width: 48px;
   height: 48px;
   background-color: #b59f5b;
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-image: url(/svg/search.svg);
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -387,8 +539,13 @@
   margin-top: 21px;
 }
 
+.tag {
+  flex-grow: 1;
+}
+
 .tag-link {
   display: flex;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   height: 30px;
@@ -437,6 +594,111 @@
   vertical-align: super;
 }
 
+
+
+/* Стили магазина */
+
+.shop {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 45px;
+}
+
+.shop-container {
+  padding: 0 25px 0 20px;
+}
+
+.item-card {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.item-picture {
+  width: 100%;
+}
+
+.item-info {
+  outline: 3px solid rgba(181, 159, 91, .6);
+  outline-offset: 25px;
+  padding-top: 28px;
+  
+}
+
+.item-title {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+}
+
+.item-description {
+  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0f0d0e;
+}
+
+.item-link {
+  text-decoration: none;
+  color: #b59f5b;
+}
+
+.item-link:hover {
+  text-decoration: underline;
+}
+
+.purchase-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.item-price {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+  color: #0f0d0e;
+}
+
+.item-price-new {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0f0d0e;
+}
+
+.buy-button {
+  width: 140px;
+  height: 48px;
+  background-color: #b59f5b;
+  border: none;
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.buy-button:hover {
+  background-color: #323232;
+}
+
 /* Стили блока footer */
 
 .footer {
@@ -452,7 +714,7 @@
   justify-content: center;
   gap: 23px;
   padding: 29px 0;
-  margin-bottom: 70px;
+  margin-bottom: 45px;
   background-color: #f4f7f6;
 }
 
@@ -468,15 +730,15 @@
 }
 
 .social-link-dribbble {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+  background-image: url(/svg/001-dribbble.svg);
 }
 
 .social-link-pinterest {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+  background-image: url(/svg/002-pinterest.svg);
 }
 
 .social-link-tumblr {
-  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+  background-image: url(/svg/003-tumblr.svg);
 }
 
 .visually-hidden {
@@ -502,4 +764,555 @@
   font-weight: 700;
   color: #999999;
   text-align: center;
+}
+
+/* Стили блока popup  */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+}
+
+.popup-container {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  height: 85%;
+  max-width: 330px;
+  max-height: 546px;
+  height: 94%;
+  padding: 30px 25px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.popup-title {
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #0f0d0e;
+  text-align: center;
+}
+
+.popup-title::after {
+  display: block;
+  width: 66px;
+  margin: 5px auto 0;
+  opacity: 0.400;
+  border-bottom: 3px #b59f5b solid;
+  content: "";
+}
+
+.feedback-form {
+  margin-top: 25px;
+  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+}
+
+.visit-frequency-hint, 
+.subscription-hint, 
+.feedback-hint {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.visit-frequency-list {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  margin-bottom: 30px;
+  border: none;
+  background-color: #f4f7f6;
+  height: 48px;
+  padding: 0 20px;
+  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  opacity: 0.541;
+  background-image: url(/svg/form-arrows.svg);
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.visit-frequency-list:focus {
+  border: 1px solid #b59f5b;
+  outline: none;
+}
+
+.subscription-question-field {
+  border: none;
+  margin-bottom: 30px;
+}
+
+.radio-container {
+  display: flex;
+}
+
+.radio-group-text {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group:nth-of-type(n+2) {
+  margin-left: 30px;
+}
+
+.radio-group-text::before {
+  display: block;
+  content: "";
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+  background-image: url(/svg/form-empty-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 23px;
+}
+
+.radio:checked ~ .radio-group-text::before {
+  background-image: url(/svg/form-circle.svg);
+}
+
+.radio {
+  display: none;
+}
+
+.feedback-textarea {
+  width: 100%;
+  border: none;
+  height: 131px;
+  background-color: #f4f7f6;
+  padding: 15px 20px;
+  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  opacity: 0.541;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.feedback-textarea:focus {
+  border: 1px solid #b59f5b;
+  outline: none;
+}
+
+.send-feedback-button {
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  height: 48px;
+  background-color: #b59f5b;
+  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.send-feedback-button:hover {
+  background-color: #323232;
+}
+
+.popup-close {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  background-image: url(/svg/form-x.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+/* Popup скрыт */
+
+._hidden {
+  display: none;
+}
+
+@media (max-width: 359px) {
+  .popup-container {
+    height: 80%;
+    padding: 15px 20px;
+  }
+
+  .feedback-form {
+    margin-top: 15px;
+    font-size: 11px;
+  }
+
+  .visit-frequency-list {
+    height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .subscription-question-field {
+    margin-bottom: 15px;
+  }
+
+  .feedback-textarea {
+    height: auto;
+  }
+
+  .send-feedback-button {
+    margin-top: 15px;
+    height: 42px;
+  }
+}
+
+@media (min-width: 535px) and (max-width: 640px) {
+  .header-title {
+    max-width: 414px;
+  }
+}
+
+@media (max-width: 640px) {
+  .item-card:nth-child(n + 2) {
+      margin-top: 50px;
+    }
+}
+
+@media (min-width: 641px) {
+  .header-menu {
+    position: initial;
+  }
+
+  .header-container {
+    width: 100%;
+  }
+
+  .header-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .trends-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .side-column {
+    max-width: 272px;
+    margin-top: 0;
+  }
+
+  .tag {
+    flex-grow: 0;
+  }
+
+  .shop {
+    margin-top: 0;
+  }
+
+  .shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .item-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-info {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .trends-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .trend-post {
+    width: calc(50% - 4px/2);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .header {
+    min-height: 395px;
+    height: fit-content;
+    padding: 0 35px;
+    background-image: url(/images/banner-bg-tablet.jpg);
+  }
+
+  .header-container {
+    justify-content: flex-start;
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  .header-title {
+    width: 93%;
+    max-width: 653px;
+    font-size: 40px;
+    line-height: 55px;
+    margin-top: 75px;
+  }
+
+  .header-logo {
+    width: 158px;
+  }
+
+  .header-top {
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .centered-part {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 35px;
+    margin: 50px auto 75px;
+  }
+
+  .trends-container {
+    margin-top: 20px;
+  }
+
+  .trend-post {
+    width: calc(50% - 4px/2);
+    min-height: 247px;
+    padding: 15px 20px;
+  }
+
+  .trend-post-info {
+    padding: 35px 30px;
+  }
+
+  .trend-post-title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .content {
+    width: calc(100% - 272px - 35px);
+    gap: 43px;
+    margin-bottom: 50px;
+  }
+
+  .post {
+    padding-bottom: 20px;
+  }
+
+  .post-image {
+    width: 100%;
+  }
+
+  .post-title-link {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .post-text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .shop-container {
+    padding: 0 22px;
+    margin-top: 25px;
+    gap: 68px;
+  }
+  
+  .item-card {
+    width: calc(50% - 136px / 2);
+    margin-top: 0;
+  }
+
+  .popup-container {
+    width: 390px;
+    height: 596px;
+  }
+
+  .popup-title {
+    font-size: 18px;
+  }
+
+  .footer {
+    padding: 0 35px;
+  }
+}
+
+@media (min-width: 641px) and (orientation: landscape) {
+  .trends-container {
+    flex-wrap: nowrap;
+  }
+
+  .trend-post {
+    width: calc(25% - 12px/4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    height: fit-content;
+    padding: 26px 0 126px;
+    background-image: url(/images/banner-bg.jpg);
+  }
+
+  .header-container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  .header-logo {
+    width: 183px;
+  }
+
+  .header-menu {
+    display: block;
+  }
+
+  .header-menu-list {
+    display: flex;
+    gap: 35px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .header-title {
+    width: 55%;
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .trends {
+    margin-top: 65px;
+  }
+
+  .trends-container {
+    margin-top: 28px;
+  }
+
+  .trend-post {
+    width: calc(25% - 12px/4);
+    min-height: 319px;
+    padding: 0 22px 15px 18px;
+  }
+
+  .trend-post-info {
+    padding: 40px 33px;
+  }
+
+  .trend-post-tag-link {
+    line-height: 37px;
+  }
+
+  .trend-post-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .trend-post-tags {
+    gap: 20px;
+  }
+
+  .centered-part {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 65px auto 90px;
+  }
+
+  .content {
+    width: calc(100% - 272px - 115px);
+    gap: 60px;
+    margin-bottom: 65px;
+  }
+
+  .post {
+    min-height: 290px;
+    flex-direction: row;
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .post-image {
+    width: auto;
+    margin-right: 30px;
+  }
+
+  .post-title {
+    margin-bottom: 35px;
+  }
+
+  .post-heading {
+    margin-bottom: 50px;
+  }
+
+  .post-tags {
+    padding-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .post-title-link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .post-text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .shop-container {
+    padding: 0 25px;
+    gap: 110px;
+  }
+
+  .item-card {
+    width: calc(100% / 3 -  220px / 3);
+  }
+
+  .item-info {
+    flex-grow: 1;
+  }
+
+  .item-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .social-links-list {
+    margin-bottom: 70px;
+  }
+
+  .popup-container {
+    width: 390px;
+    max-height: 589px;
+  }
+
+  .popup-title {
+    font-size: 20px;
+  }
+
+  .popup-close {
+    top: -23px;
+    width: 18px;
+    height: 18px;
+  }
 }
