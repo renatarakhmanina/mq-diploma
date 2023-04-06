@@ -1,14 +1,14 @@
 /* Шрифты */
 
 @font-face {
-  src: url(fonts/OpenSans-Regular.ttf) format("ttf"), url(fonts/OpenSans-Regular.woff) format("woff"), url(fonts/OpenSans-Regular.woff2) format("woff2");
+  src: url("fonts/OpenSans-Regular.ttf") format("ttf"), url("fonts/OpenSans-Regular.woff") format("woff"), url("fonts/OpenSans-Regular.woff2") format("woff2");
   font-family: "OpenSans-Regular";
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  src: url(fonts/OpenSans-Bold.ttf) format("ttf"), url(fonts/OpenSans-Bold.woff) format("woff"), url(fonts/OpenSans-Bold.woff2) format("woff2");
+  src: url("fonts/OpenSans-Bold.ttf") format("ttf"), url("fonts/OpenSans-Bold.woff") format("woff"), url("fonts/OpenSans-Bold.woff2") format("woff2");
   font-family: "OpenSans-Bold";
   font-weight: 700;
   font-style: normal;
@@ -30,7 +30,7 @@
   justify-content: center;
   height: 100vh;
   padding: 0 15px;
-  background-image: url(images/banner-mobile.jpg);
+  background-image: url("images/banner-mobile.jpg");
   background-size: cover;
 }
 
@@ -199,19 +199,19 @@
 }
 
 .trend-post:nth-child(1) {
-  background-image: url(images/trend1.jpg);
+  background-image: url("images/trend1.jpg");
 }
 
 .trend-post:nth-child(2) {
-  background-image: url(images/trend2.jpg);
+  background-image: url("images/trend2.jpg");
 }
 
 .trend-post:nth-child(3) {
-  background-image: url(images/trend3.jpg);
+  background-image: url("images/trend3.jpg");
 }
 
 .trend-post:nth-child(4) {
-  background-image: url(images/trend4.jpg);
+  background-image: url("images/trend4.jpg");
 }
 
 .trend-post-tags {
@@ -469,7 +469,7 @@
   width: 48px;
   height: 48px;
   background-color: #b59f5b;
-  background-image: url(svg/search.svg);
+  background-image: url("svg/search.svg");
   background-size: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -731,15 +731,15 @@
 }
 
 .social-link-dribbble {
-  background-image: url(svg/001-dribbble.svg);
+  background-image: url("svg/001-dribbble.svg");
 }
 
 .social-link-pinterest {
-  background-image: url(svg/002-pinterest.svg);
+  background-image: url("svg/002-pinterest.svg");
 }
 
 .social-link-tumblr {
-  background-image: url(svg/003-tumblr.svg);
+  background-image: url("svg/003-tumblr.svg");
 }
 
 .visually-hidden {
@@ -842,7 +842,7 @@
   font-size: 13px;
   color: #000000;
   opacity: 0.541;
-  background-image: url(svg/form-arrows.svg);
+  background-image: url("svg/form-arrows.svg");
   background-size: 8px;
   background-repeat: no-repeat;
   background-position: right 15px center;
@@ -877,14 +877,14 @@
   width: 23px;
   height: 23px;
   margin-right: 5px;
-  background-image: url(svg/form-empty-circle.svg);
+  background-image: url("svg/form-empty-circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 23px;
 }
 
 .radio:checked~.radio-group-text::before {
-  background-image: url(svg/form-circle.svg);
+  background-image: url("svg/form-circle.svg");
 }
 
 .radio {
@@ -933,7 +933,7 @@
   position: absolute;
   top: -35px;
   right: 0;
-  background-image: url(svg/form-x.svg);
+  background-image: url("svg/form-x.svg");
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
@@ -1053,7 +1053,7 @@
     min-height: 395px;
     height: fit-content;
     padding: 0 35px;
-    background-image: url(images/banner-bg-tablet.jpg);
+    background-image: url("images/banner-bg-tablet.jpg");
   }
 
   .header-container {
@@ -1169,7 +1169,7 @@
   .header {
     height: fit-content;
     padding: 26px 0 126px;
-    background-image: url(images/banner-bg.jpg);
+    background-image: url("images/banner-bg.jpg");
   }
 
   .header-container {
