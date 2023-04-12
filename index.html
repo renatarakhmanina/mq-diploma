@@ -41,7 +41,7 @@
             </li>
           </ul>
           <button class="menu-button" type="button">
-            <span class="menu-button-description visually-hidden">Кнопка меню</span>
+            <span class="menu-button-description">Кнопка меню</span>
           </button>
         </nav>
 
@@ -59,7 +59,7 @@
     <section class="trends">
       <h2 class="section-header">Сейчас в тренде</h2>
       <div class="trends-container">
-        <article class="trend-post">
+        <article class="trend-post trend-post-garden">
           <div class="trend-post-info">
             <ul class="trend-post-tags">
               <li class="trend-post-tag">
@@ -76,7 +76,7 @@
           </div>
         </article>
 
-        <article class="trend-post">
+        <article class="trend-post trend-post-cheese">
           <div class="trend-post-info">
             <ul class="trend-post-tags">
               <li class="trend-post-tag">
@@ -90,7 +90,7 @@
           </div>
         </article>
 
-        <article class="trend-post">
+        <article class="trend-post trend-post-hike">
           <div class="trend-post-info">
             <ul class="trend-post-tags">
               <li class="trend-post-tag">
@@ -107,7 +107,7 @@
           </div>
         </article>
 
-        <article class="trend-post">
+        <article class="trend-post trend-post-lemon">
           <div class="trend-post-info">
             <ul class="trend-post-tags">
               <li class="trend-post-tag">
@@ -568,7 +568,7 @@
       <h2 class="popup-title">Ваш фидбек</h2>
       <form class="feedback-form">
         <label class="visit-frequency">
-          <span class="visit-frequency-hint">Как часто вы заходите на сайт?</span>
+          <span class="popup-hint visit-frequency-hint">Как часто вы заходите на сайт?</span>
           <select class="visit-frequency-list" name="visit-frequency-list">
             <option value="Каждый день">Каждый день</option>
             <option value="Почти каждый день" selected>Почти каждый день</option>
@@ -579,7 +579,7 @@
         </label>
 
         <fieldset class="subscription-question-field">
-          <legend class="subscription-hint">Вы подписаны на e-mail рассылку?</legend>
+          <legend class="popup-hint subscription-hint">Вы подписаны на e-mail рассылку?</legend>
           <div class="radio-container">
             <label class="radio-group">
               <input class="radio" type="radio" name="radio-group" value="Да" checked>
@@ -593,7 +593,7 @@
         </fieldset>
 
         <label class="feedback">
-          <span class="feedback-hint">Расскажите, какой контент вы хотели бы
+          <span class="popup-hint feedback-hint">Расскажите, какой контент вы хотели бы
             видеть на нашем сайте?</span>
           <textarea class="feedback-textarea" type="text" required placeholder="Может, больше рецептов?"></textarea>
         </label>
